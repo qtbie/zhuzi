@@ -1,0 +1,50 @@
+//
+//  public.pch
+//  superguy
+//
+//  Created by bqt on 16/3/14.
+//  Copyright © 2016年 bambootech. All rights reserved.
+//
+
+#ifndef public_pch
+#define public_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+// 判断设备系统
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0 && [[UIDevice currentDevice].systemVersion doubleValue] < 9.0)
+#define iOS9 ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0)
+
+
+// 获得RGB颜色
+#define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r, g, b)                        RGBA(r, g, b, 1.0f)
+
+// 屏幕大小尺寸
+#define screen_width [UIScreen mainScreen].bounds.size.width
+#define screen_height [UIScreen mainScreen].bounds.size.height
+
+//字体
+#define kFONT16                  [UIFont systemFontOfSize:16.0f]
+#define kFONT15                  [UIFont systemFontOfSize:15.0f]
+#define kFONT13                  [UIFont systemFontOfSize:13.0f]
+#define kFONT12                  [UIFont systemFontOfSize:12.0f]
+#define kFONT10                  [UIFont systemFontOfSize:10.0f]
+
+
+//取view的坐标及长宽
+#define W(view)    view.frame.size.width
+#define H(view)    view.frame.size.height
+#define X(view)    view.frame.origin.x
+#define Y(view)    view.frame.origin.y
+
+//常用对象
+#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+//系统版本
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+// 服务器
+#define ServerUrl @""
+
+#endif /* public_pch */
